@@ -3,11 +3,11 @@ chcp 65001 >nul
 
 :: =============================================
 :: WSL2 + Ubuntu 22.04 Auto Setup Script
-:: - Windows 11 Àü¿ë °¡Á¤
+:: - Windows 11 ì „ìš© ê°€ì •
 :: - Run as Administrator
 :: =============================================
 
-:: 0. °ü¸®ÀÚ ±ÇÇÑ Ã¼Å©
+:: 0. ê´€ë¦¬ì ê¶Œí•œ ì²´í¬
 net session >nul 2>&1
 if %errorlevel% neq 0 (
     echo [ERROR] This script must be run as Administrator.
@@ -22,7 +22,7 @@ echo  WSL2 + Ubuntu 22.04 Auto Setup
 echo =============================================
 echo.
 
-:: 1. WSL ±â´É È°¼ºÈ­
+:: 1. WSL ê¸°ëŠ¥ í™œì„±í™”
 echo [1/5] Enabling "Windows Subsystem for Linux" feature...
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 if %errorlevel% neq 0 (
@@ -30,7 +30,7 @@ if %errorlevel% neq 0 (
 )
 
 echo.
-:: 2. VirtualMachinePlatform ±â´É È°¼ºÈ­
+:: 2. VirtualMachinePlatform ê¸°ëŠ¥ í™œì„±í™”
 echo [2/5] Enabling "Virtual Machine Platform" feature...
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 if %errorlevel% neq 0 (
@@ -38,11 +38,11 @@ if %errorlevel% neq 0 (
 )
 
 echo.
-:: (¿É¼Ç) Hyper-V¸¦ °°ÀÌ ¾²°í ½ÍÀ¸¸é ÁÖ¼® ÇØÁ¦
+:: (ì˜µì…˜) Hyper-Vë¥¼ ê°™ì´ ì“°ê³  ì‹¶ìœ¼ë©´ ì£¼ì„ í•´ì œ
 :: echo [*] Enabling Hyper-V (optional)...
 :: dism.exe /online /enable-feature /featurename:Microsoft-Hyper-V-All /all /norestart
 
-:: 3. ±âº» WSL ¹öÀüÀ» 2·Î ¼³Á¤
+:: 3. ê¸°ë³¸ WSL ë²„ì „ì„ 2ë¡œ ì„¤ì •
 echo [3/5] Setting WSL default version to 2...
 wsl --set-default-version 2
 if %errorlevel% neq 0 (
@@ -52,7 +52,7 @@ if %errorlevel% neq 0 (
 )
 
 echo.
-:: 4. Ubuntu 22.04 ¼³Ä¡
+:: 4. Ubuntu 22.04 ì„¤ì¹˜
 echo [4/5] Installing Ubuntu 22.04 LTS (this may take several minutes)...
 echo        Please make sure you are connected to the Internet.
 wsl --install -d Ubuntu-22.04
@@ -63,7 +63,7 @@ if %errorlevel% neq 0 (
 )
 
 echo.
-:: 5. ¸¶¹«¸® ¹× ÀçºÎÆÃ ¾È³»
+:: 5. ë§ˆë¬´ë¦¬ ë° ì¬ë¶€íŒ… ì•ˆë‚´
 echo [5/5] Setup steps finished.
 echo It is strongly recommended to reboot your PC to complete changes.
 echo.
