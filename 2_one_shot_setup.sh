@@ -3,6 +3,7 @@ set -euo pipefail
 
 echo "====================================================="
 echo "  FULL SETUP: Docker + CUDA Toolkit + UV + af3cli"
+echo "  + wget + zstd installation"
 echo "  (For WSL2 / Ubuntu 22.04)"
 echo "====================================================="
 echo
@@ -19,6 +20,20 @@ for cmd in git curl; do
 done
 
 echo "[INFO] System detected: $(lsb_release -d -s)"
+echo
+
+#-------------------------------------------------------------------------------
+# 0-2. Install wget & zstd 추가
+#-------------------------------------------------------------------------------
+echo "====================================================="
+echo "[0] Installing wget and zstd..."
+echo "====================================================="
+
+sudo apt update -y
+sudo apt install -y wget zstd
+
+echo "[INFO] wget: $(command -v wget)"
+echo "[INFO] zstd: $(command -v zstd)"
 echo
 
 #-------------------------------------------------------------------------------
@@ -153,6 +168,8 @@ echo "  Installation Complete!"
 echo
 echo "  - Docker + NVIDIA Toolkit configured"
 echo "  - UV installed"
+echo "  - wget installed"
+echo "  - zstd installed"
 echo "  - af3cli cloned and environment created"
 echo "  - AF3 Docker image pulled"
 echo
@@ -165,3 +182,4 @@ echo "  docker run --rm hello-world"
 echo "  docker run --rm --gpus all nvidia/cuda:12.3.0-base nvidia-smi"
 echo
 echo "====================================================="
+
