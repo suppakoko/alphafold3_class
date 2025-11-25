@@ -1,2 +1,2 @@
-# alphafold3_class
+# Alphafold3_class
 
