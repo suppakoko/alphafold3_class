@@ -1,6 +1,6 @@
 # Alphafold3 Class
 
-🧬 Alphafold3 Class — Full Setup Guide
+## 🧬 Alphafold3 Class — Full Setup Guide
 
 Windows 11 + Ubuntu(WSL2) + Docker + CUDA + UV + af3cli 자동 설치 환경 구축을 위한 완전한 매뉴얼
 
@@ -8,7 +8,7 @@ Windows 11 + Ubuntu(WSL2) + Docker + CUDA + UV + af3cli 자동 설치 환경 구
 원클릭 설치 스크립트 기반으로 전체 환경 구축 과정을 설명합니다.
 
 
-🖥️ 1. Windows 11 Environment Setup
+### 🖥️ 1. Windows 11 Environment Setup
 
 Windows에서 아래 파일을 관리자 권한으로 실행하세요.
 
@@ -23,7 +23,7 @@ Install Ubuntu 22.04
 Set default user environment
 
 
-🐧 2. Ubuntu (WSL2) Environment Setup
+### 🐧 2. Ubuntu (WSL2) Environment Setup
 
 Ubuntu 터미널에서 아래 스크립트를 실행하세요.
 
