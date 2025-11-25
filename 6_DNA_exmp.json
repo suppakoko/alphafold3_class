@@ -1,0 +1,19 @@
+{
+  "name": "example_DNA_job", 
+  "modelSeeds": [
+    1
+  ], 
+  "sequences": [
+    {
+      "dna": {
+        "id": [
+          "A", 
+          "B"
+        ], 
+        "sequence": "GCGAATTCG"
+      }
+    }
+  ], 
+  "dialect": "alphafold3", 
+  "version": 1
+}
