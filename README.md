@@ -18,9 +18,11 @@ Windows 11 + Ubuntu(WSL2) + Docker + CUDA + UV + af3cli 자동 설치 환경 구
 + Install Ubuntu 22.04
 + Set default user environment
 
-### 🐧 2. Ubuntu (WSL2) Environment Setup
 
+### 🐧 2. Ubuntu (WSL2) Environment Setup
+검색 -> ubuntu -> ubuntu shell 실행
 * Ubuntu 터미널에서 아래 스크립트를 실행하세요.
+* 2_one_shot_setup.sh 파일을 ubuntu 환경 안으로 이동 또는 생성
 ```bash
 bash 2_one_shot_setup.sh
 ```
