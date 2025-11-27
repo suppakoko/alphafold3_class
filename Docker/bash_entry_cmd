@@ -1,0 +1,16 @@
+# entering bash shell of Alphaofold3 container
+docker run --rm --entrypoint bash -v <current path>:/home/convert suppak/alphafold3:latest
+
+```python
+from rdkit import Chem
+from alphafold3.data.tools.rdkit_utils import mol_to_ccd_cif
+
+supplier = Chem.SDMolSupplier('<sdf file name>.sdf', removeHs=True)
+mol = supplier[0]
+if mol is None:
+    cif_block = mol_to_ccd_cif(mol, '<sdf file name>.sdf')
+    with open('<sdf file name>.cif', 'w') as f:
+        f.write(str(cif_block))
+    print("Saved <sdf file name>.cif successfully.")
+```
+
