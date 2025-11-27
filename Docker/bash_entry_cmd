@@ -1,6 +1,5 @@
 # entering bash shell of Alphaofold3 container
-docker run --rm --entrypoint bash -v <current path>:/home/convert suppak/alphafold3:clean
-
+* docker run --rm --entrypoint bash -v <current path>:/home/convert suppak/alphafold3:clean
 ```python
 from rdkit import Chem
 from alphafold3.data.tools.rdkit_utils import mol_to_ccd_cif
