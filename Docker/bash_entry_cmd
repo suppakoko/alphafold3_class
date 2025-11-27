@@ -1,5 +1,5 @@
 # entering bash shell of Alphaofold3 container
-docker run --rm --entrypoint bash -v <current path>:/home/convert suppak/alphafold3:latest
+docker run --rm --entrypoint bash -v <current path>:/home/convert suppak/alphafold3:clean
 
 ```python
 from rdkit import Chem
